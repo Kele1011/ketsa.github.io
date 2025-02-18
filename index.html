@@ -68,23 +68,22 @@
       line-height: 1.6;
     }
     .nav {
-      display: flex;
-      justify-content: center;
-      gap: 0rem;
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 4rem;
       padding: 0.5rem;
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
+      text-align: center;
       position: relative;
-      top: 0;
-      z-index: 1000;
+      font-size: larger; 
+      /* For potential mobile menu */
     }
-    .nav a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: 600;
-      padding: 0.8rem 1.5rem;
-      transition: all 0.3s ease;
-      border-radius: 30px;
+    .nav-links {
+      display: none; /* Hide regular menu */
+      width: 100%;
+    }
+
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
     }
     nav a:hover {
       background: #003366;
