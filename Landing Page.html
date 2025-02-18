@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurveyEarn | Instant Payouts for Paid Surveys</title>
+    <style>
+      :root {
+        --primary: #2563eb; /* Trust Blue */
+        --accent: #dc2626; /* Urgent Red */
+        --success: #16a34a; /* Positive Green */
+        --dark: #1e293b; /* Primary Text */
+        --muted: #64748b; /* Secondary Text */
+      }
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        color: var(--dark);
+        background: white;
+      }
+
+      .floating-cta {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--accent);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .header-section {
+        text-align: center;
+        padding: 4rem 1rem 6rem;
+        background: linear-gradient(to bottom, #f8fafc 0%, white 100%);
+      }
+
+      .value-stack {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+
+      .value-card {
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        transition: transform 0.2s;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .countup {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 1rem 0;
+      }
+
+      .video-testimonial {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 4rem 0;
+      }
+
+      .trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin: 3rem 0;
+      }
+
+      .live-counter {
+        background: var(--success);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="live-counter">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"
+          />
+        </svg>
+        <span id="liveUsers">834,291</span> active earners
+      </div>
+
+      <h1>Get Paid Instantly for Your Opinions</h1>
+      <p class="content-text">
+        Earn $1-$5 per survey • No minimum payout • Join free in 30 seconds
+      </p>
+
+      <a href="#signup" class="cta-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M16 8l-8 8M8 8l8 8" />
+        </svg>
+        Start Earning Now
+      </a>
+
+      <div class="trust-badges">
+        <img src="norton-secured.png" alt="Norton Secured" width="120" />
+        <img src="trustpilot-4.8.png" alt="Trustpilot 4.8" width="120" />
+        <img src="google-safe.png" alt="Google Safe" width="120" />
+      </div>
+    </div>
+
+    <div class="value-stack">
+      <div class="value-card">
+        <div class="countup" data-target="1287456">1,287,456</div>
+        <h3>Surveys Completed</h3>
+        <p>Join our active community of opinion sharers</p>
+      </div>
+      <div class="value-card">
+        <div class="countup" data-target="563219">$563,219</div>
+        <h3>Paid Out This Week</h3>
+        <p>Real cash payments to our members</p>
+      </div>
+      <div class="value-card">
+        <div class="countup" data-target="954">954</div>
+        <h3>New Surveys Daily</h3>
+        <p>Fresh opportunities every day</p>
+      </div>
+    </div>
+
+    <div class="video-testimonial">
+      <video
+        controls
+        poster="testimonial-thumbnail.jpg"
+        style="width: 100%; border-radius: 8px"
+      >
+        <source src="user-testimonial.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="floating-cta" id="floatingCta">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M16 8l-8 8M8 8l8 8" />
+      </svg>
+      Join Now - 3 Surveys Waiting!
+    </div>
+
+    <script>
+      // Floating CTA Logic
+      window.addEventListener("scroll", () => {
+        const floatingCta = document.getElementById("floatingCta");
+        if (window.scrollY > 500) {
+          floatingCta.style.display = "flex";
+        } else {
+          floatingCta.style.display = "none";
+        }
+      });
+
+      // Live Counter Animation
+      function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          obj.textContent = Math.floor(
+            progress * (end - start) + start
+          ).toLocaleString();
+          if (progress < 1) window.requestAnimationFrame(step);
+        };
+        window.requestAnimationFrame(step);
+      }
+
+      document.querySelectorAll(".countup").forEach((counter) => {
+        const target = parseInt(counter.getAttribute("data-target"));
+        animateValue(counter, 0, target, 2000);
+      });
+    </script>
+  </body>
+</html>
