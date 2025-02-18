@@ -68,23 +68,23 @@
       line-height: 1.6;
     }
     .nav {
-      flex-direction: column; /* Stack nav items vertically */
-      gap: 4rem;
-      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
       text-align: center;
-      position: relative;
-      font-size: larger; 
-      /* For potential mobile menu */
+      background-color: #ffffff;
     }
-    .nav-links {
-      display: none; /* Hide regular menu */
-      width: 100%;
+    .nav a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      transition: all 0.3s ease;
+      border-radius: 15px;
     }
 
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-    }
     nav a:hover {
       background: #003366;
       color: white;
