@@ -6,234 +6,238 @@
     <title>AllianceLift Marketing - Premium Performance Marketing</title>
   </head>
   <style>
-    img {
-      width: 100px;
-      border-radius: 50px;
-      display: block;
-      margin: 0 auto;
-      background-color: #f8f9fa;
-    }
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", system-ui, sans-serif;
-    }
-    body {
-      line-height: 1.7;
-      color: #2d3436;
-      background: #ffffff;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(45deg, #003366, #0066cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      font-size: 2rem;
-      color: #003366;
-      margin-bottom: 3rem;
-      position: relative;
-      padding-bottom: 1rem;
-    }
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 4px;
-      background: #ff6b6b;
-      border-radius: 2px;
-    }
-    .header {
-      background: #ffffff;
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    }
-    .header p {
-      font-size: 1.4rem;
-      color: #666;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    .nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      text-align: center;
-      background-color: #ffffff;
-    }
-    .nav a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      transition: all 0.3s ease;
-      border-radius: 15px;
-    }
+        img {
+          width: 100px;
+          border-radius: 50px;
+          display: block;
+          margin: 0 auto;
+          background-color: #f8f9fa;
+        }
+        /* Base Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Segoe UI", system-ui, sans-serif;
+        }
+        body {
+          line-height: 1.7;
+          color: #2d3436;
+          background: #ffffff;
+        }
+        h1 {
+          font-size: 3rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          margin-bottom: 1.5rem;
+          background: linear-gradient(45deg, #003366, #0066cc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+          font-size: 2rem;
+          color: #003366;
+          margin-bottom: 3rem;
+          position: relative;
+          padding-bottom: 1rem;
+        }
+        h2::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 120px;
+          height: 4px;
+          background: #ff6b6b;
+          border-radius: 2px;
+        }
+        .header {
+          background: #ffffff;
+          padding: 4rem 2rem 2rem;
+          text-align: center;
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        .header p {
+          font-size: 1.4rem;
+          color: #666;
+          max-width: 800px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+        .nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          text-align: center;
+          background-color: #ffffff;
+        }
+        .nav a {
+          text-decoration: none;
+          color: #003366;
+          font-weight: 600;
+          padding: 0.4rem 0.8rem;
+          transition: all 0.3s ease;
+          border-radius: 15px;
+        }
 
-    nav a:hover {
-      background: #003366;
-      color: white;
-      transform: translateY(-2px);
-    }
-    .hero {
-      background: linear-gradient(
-          135deg,
-          rgba(0, 51, 102, 0.9),
-          rgba(0, 102, 204, 0.9)
-        ),
-        url("marketing-bg.jpg") center/cover;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 1rem;
-    }
-    .hero-content {
-      max-width: 900px;
-    }
-    .hero h2 {
-      font-size: 2.6rem;
-      color: white;
-      margin-bottom: 2rem;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    .hero p {
-      font-size: 1.4rem;
-      margin-bottom: 3rem;
-      line-height: 1.8;
-    }
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .section-intro {
-      font-size: 1.2rem;
-      color: #666;
-      max-width: 800px;
-      margin: 0 auto 4rem;
-      text-align: center;
-      line-height: 1.8;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      margin-top: 3rem;
-    }
-    .service-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-      text-align: center;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-    }
-    .service-card h3 {
-      color: #003366;
-      margin: 1.5rem 0;
-      font-size: 1.5rem;
-    }
-    /* About Section */
-    .profile-section {
-      text-align: center;
-      background: white;
-      padding: 4rem 2rem;
-      margin: 3rem 0;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-    .profile-img {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 2rem;
-      border: 5px solid #003366;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    /* Initiatives Section */
-    .initiatives-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .initiative-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-      border-left: 4px solid #003366;
-      transition: transform 0.3s ease;
-    }
-    .initiative-card:hover {
-      transform: translateY(-5px);
-    }
-    /* CTA Button */
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1.3rem 3rem;
-      background: linear-gradient(45deg, #510d63, #0066cc);
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(0, 51, 102, 0.3);
-      font-size: 1.1rem;
-    }
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(0, 51, 102, 0.4);
-    }
-    /* Footer */
-    .footer {
-      background: #003366;
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-      margin-top: 6rem;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      h2 {
-        font-size: 2rem;
-      }
-      .nav {
-        gap: 1rem;
-        padding: 1rem;
-      }
-      .hero {
-        height: 60vh;
-      }
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-    }
+        nav a:hover {
+          background: #003366;
+          color: white;
+          transform: translateY(-2px);
+        }
+        .hero {
+          background: linear-gradient(
+              135deg,
+              rgba(0, 51, 102, 0.9),
+              rgba(0, 102, 204, 0.9)
+            ),
+            url("marketing-bg.jpg") center/cover;
+          min-height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          padding: 4rem 2rem;
+          background-size: cover;
+        }
+        .hero-content {
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .hero h2 {
+          font-size: 2.6rem;
+          color: white;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hero p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          line-height: 1.6;
+        }
+        .section {
+          padding: 3rem 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .section-intro {
+          font-size: 1.2rem;
+          color: #666;
+          max-width: 800px;
+          margin: 0 auto 4rem;
+          text-align: center;
+          line-height: 1.8;
+        }
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 3rem;
+          margin-top: 3rem;
+        }
+        .service-card {
+          background: white;
+          padding: 2.5rem;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          transition: transform 0.3s ease;
+          text-align: center;
+        }
+        .service-card:hover {
+          transform: translateY(-10px);
+        }
+        .service-card h3 {
+          color: #003366;
+          margin: 1.5rem 0;
+          font-size: 1.5rem;
+        }
+        /* About Section */
+        .profile-section {
+          text-align: center;
+          background: white;
+          padding: 4rem 2rem;
+          margin: 3rem 0;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .profile-img {
+          width: 240px;
+          height: 240px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 2rem;
+          border: 5px solid #003366;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        /* Initiatives Section */
+        .initiatives-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+        }
+        .initiative-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+          border-left: 4px solid #003366;
+          transition: transform 0.3s ease;
+        }
+        .initiative-card:hover {
+          transform: translateY(-5px);
+        }
+        /* CTA Button */
+        .cta-button {
+          display: inline-flex;
+          align-items: center;
+          padding: 1.3rem 3rem;
+          background: linear-gradient(45deg, #510d63, #0066cc);
+          color: white;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          box-shadow: 0 8px 25px rgba(0, 51, 102, 0.3);
+          font-size: 1.1rem;
+        }
+        .cta-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 35px rgba(0, 51, 102, 0.4);
+        }
+        /* Footer */
+        .footer {
+          background: #003366;
+          color: white;
+          padding: 4rem 2rem;
+          text-align: center;
+          margin-top: 6rem;
+        }
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 2.5rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+          .nav {
+            gap: 1rem;
+            padding: 1rem;
+          }
+          .hero {
+            height: 60vh;
+          }
+          .hero h2 {
+            font-size: 2.2rem;
+          }
+        }
   </style>
   <body>
     <img src="AllianceLIFT MARKETING (1).png" />
