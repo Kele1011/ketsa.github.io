@@ -3,119 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SurveyEarn | Instant Payouts for Paid Surveys</title>
+    <title>SurveyEarn | Get Paid for Surveys - High Payouts</title>
     <style>
       :root {
-        --primary: #2563eb; /* Trust Blue */
-        --accent: #dc2626; /* Urgent Red */
-        --success: #16a34a; /* Positive Green */
-        --dark: #1e293b; /* Primary Text */
-        --muted: #64748b; /* Secondary Text */
+        --primary-color: #2563eb; /* Trust-building blue */
+        --accent-color: #ef4444; /* Urgent red */
+        --positive-green: #22c55e; /* Success color */
+        --dark-text: #1e293b; /* Readable dark gray */
       }
 
       body {
         font-family: "Inter", system-ui, sans-serif;
         line-height: 1.6;
         margin: 0;
-        color: var(--dark);
-        background: white;
-      }
-
-      .floating-cta {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: var(--accent);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        z-index: 100;
-        display: none;
-        align-items: center;
-        gap: 0.5rem;
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      .header-section {
+        padding: 20px;
         text-align: center;
-        padding: 4rem 1rem 6rem;
-        background: linear-gradient(to bottom, #f8fafc 0%, white 100%);
+        color: var(--dark-text);
       }
 
-      .value-stack {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 3rem auto;
-        padding: 0 1rem;
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
       }
 
-      .value-card {
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        transition: transform 0.2s;
+      h1 {
+        color: var(--primary-color);
+        font-size: 2.8rem;
+        margin: 2rem 0 1.5rem;
+        line-height: 1.2;
+      }
+      .secpara {
+        font-family: "Inter", system-ui, sans-serif;
+        color: #5238c9;
+        line-height: 1.6;
+        margin: 0;
+        font-size: large;
+        text-align: center;
       }
 
-      .value-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .countup {
-        font-size: 2.5rem;
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent-color);
+        color: white;
+        padding: 1.2rem 3rem;
+        border-radius: 8px;
+        text-decoration: none;
         font-weight: 700;
-        color: var(--primary);
-        margin: 1rem 0;
+        margin: 2rem 0;
+        box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
       }
 
-      .video-testimonial {
-        background: #f8fafc;
-        border-radius: 16px;
-        padding: 2rem;
-        margin: 4rem 0;
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
       }
 
-      .trust-badges {
-        display: flex;
-        flex-wrap: wrap;
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        justify-content: center;
         margin: 3rem 0;
       }
 
-      .live-counter {
-        background: var(--success);
-        color: white;
-        padding: 0.5rem 1.5rem;
-        border-radius: 50px;
+      .stat-item {
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial {
+        background: #f1f5f9;
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 3rem 0;
+        text-align: left;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .testimonial img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .payment-logos {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .payment-logos img {
+        height: 45px;
+        opacity: 1.1;
+      }
+
+      .guarantee-badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 8px;
+        background: var(--positive-green);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 50px;
         margin: 1rem 0;
       }
+      .fbdisclaimer {
+        color: black;
+        font-size: 0.6em;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding: 2rem;
+        color: #64748b;
+        border-top: 1px solid #e2e8f0;
+      }
     </style>
+    <!-- Inter Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="header-section">
-      <div class="live-counter">
+    <div class="container">
+      <div class="guarantee-badge">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -124,115 +156,113 @@
           fill="none"
           stroke="currentColor"
           stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          <path
-            d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"
-          />
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         </svg>
-        <span id="liveUsers">834,291</span> active earners
+        Secure & Trusted Since 2014
       </div>
 
-      <h1>Get Paid Instantly for Your Opinions</h1>
+      <h1>Earn Real Money Sharing Your Opinion</h1>
       <p class="content-text">
-        Earn $1-$5 per survey • No minimum payout • Join free in 30 seconds
+        Get paid instantly for quick market research surveys. Join 832,456+
+        members earning extra income.
+      </p>
+      <p class="secpara">
+        <strong
+          >"Sign Up, Confirm Email And Complete A Short Survey To Get Paid
+          Instantly"</strong
+        >
       </p>
 
-      <a href="#signup" class="cta-button">
+      <a
+        href="https://afflat3d2.com/lnk.asp?o=24890&c=918277&a=571436&k=F5874BE2984105D0DCC631627F4989A7&l=29023&s2=LP1"
+        class="cta-button"
+      >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
+          xmlns="width"
+          ="24"
           height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
           stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
           <circle cx="12" cy="12" r="10" />
-          <path d="M16 8l-8 8M8 8l8 8" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
         </svg>
-        Start Earning Now
+        Start Free Now
       </a>
+      <p>Up to $20/Survey and a sign up bonus awaits!</p>
 
-      <div class="trust-badges">
-        <img src="norton-secured.png" alt="Norton Secured" width="120" />
-        <img src="trustpilot-4.8.png" alt="Trustpilot 4.8" width="120" />
-        <img src="google-safe.png" alt="Google Safe" width="120" />
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-number">$1M+</div>
+          <div>Paid to Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.8/5</div>
+          <div>User Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15K+</div>
+          <div>Daily Surveys</div>
+        </div>
       </div>
-    </div>
 
-    <div class="value-stack">
-      <div class="value-card">
-        <div class="countup" data-target="1287456">1,287,456</div>
-        <h3>Surveys Completed</h3>
-        <p>Join our active community of opinion sharers</p>
+      <div class="testimonial">
+        <p>
+          "I earned $245 last month just answering surveys during my commute.
+          The payments arrive instantly - it's become my favorite side hustle!"
+        </p>
+        <div class="testimonial-author">
+          <img src="https://i.pravatar.cc/50" alt="User avatar" />
+          <div>
+            <div>Sarah J.</div>
+            <div style="color: #64748b">New York</div>
+          </div>
+        </div>
       </div>
-      <div class="value-card">
-        <div class="countup" data-target="563219">$563,219</div>
-        <h3>Paid Out This Week</h3>
-        <p>Real cash payments to our members</p>
+
+      <div class="payment-logos">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png"
+          alt="PayPal"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
+          alt="Visa"
+        />
+        <img
+          src="https://www.paymentscardsandmobile.com/wp-content/uploads/2023/12/Google-Pay-logo-1024x688.png"
+          alt="Google Pay"
+        />
       </div>
-      <div class="value-card">
-        <div class="countup" data-target="954">954</div>
-        <h3>New Surveys Daily</h3>
-        <p>Fresh opportunities every day</p>
-      </div>
+      <p class="fbdisclaimer">
+        This site and the content and services offered on this site is in no way
+        sponsored, affiliated, endorsed or administered by, or associated with,
+        Facebook. Nor have they been reviewed tested or certified by Facebook.
+        Facebook is a registered trademark of Facebook, Inc.
+      </p>
+
+      <footer>
+        <p>
+          © 2023 SurveyEarn •
+          <a href="#privacy" style="color: var(--primary-color)"
+            >Privacy Policy</a
+          >
+          •
+          <a href="#terms" style="color: var(--primary-color)"
+            >Terms of Service</a
+          >
+        </p>
+        <p style="margin-top: 1rem">
+          Member of Market Research Association • SSL Secured
+        </p>
+      </footer>
     </div>
-
-    <div class="video-testimonial">
-      <video
-        controls
-        poster="testimonial-thumbnail.jpg"
-        style="width: 100%; border-radius: 8px"
-      >
-        <source src="user-testimonial.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <div class="floating-cta" id="floatingCta">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M16 8l-8 8M8 8l8 8" />
-      </svg>
-      Join Now - 3 Surveys Waiting!
-    </div>
-
-    <script>
-      // Floating CTA Logic
-      window.addEventListener("scroll", () => {
-        const floatingCta = document.getElementById("floatingCta");
-        if (window.scrollY > 500) {
-          floatingCta.style.display = "flex";
-        } else {
-          floatingCta.style.display = "none";
-        }
-      });
-
-      // Live Counter Animation
-      function animateValue(obj, start, end, duration) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-          if (!startTimestamp) startTimestamp = timestamp;
-          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          obj.textContent = Math.floor(
-            progress * (end - start) + start
-          ).toLocaleString();
-          if (progress < 1) window.requestAnimationFrame(step);
-        };
-        window.requestAnimationFrame(step);
-      }
-
-      document.querySelectorAll(".countup").forEach((counter) => {
-        const target = parseInt(counter.getAttribute("data-target"));
-        animateValue(counter, 0, target, 2000);
-      });
-    </script>
   </body>
 </html>
