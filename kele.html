@@ -1,26 +1,186 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My first web page</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyEarn | Get Paid for Surveys - High Payouts</title>
     <style>
-      img {
-        width: 100px;
-        border-radius: 50px;
-        float: left;
-        margin-right: 20px;
-      }
-      .username {
-        font-weight: bold;
-      }
-      .magwala {
-        color: red;
-      }
+        :root {
+            --primary-color: #2563eb;  /* Trust-building blue */
+            --accent-color: #ef4444;   /* Urgent red */
+            --positive-green: #22c55e; /* Success color */
+            --dark-text: #1e293b;      /* Readable dark gray */
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: var(--dark-text);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin: 2rem 0 1.5rem;
+            line-height: 1.2;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-color);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial {
+            background: #f1f5f9;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: left;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .payment-logos img {
+            height: 30px;
+            opacity: 0.8;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--positive-green);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin: 1rem 0;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
     </style>
-  </head>
-  <body>
-    <a href="comany/about.html">About me</a>
-    <a href="images/133810608839413232.jpg">My photo</a>
-    <p class="=username">Ketsawela</p>""
-    <p class="magwala">Uyinsizwa</p>
-  </body>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="guarantee-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secure & Trusted Since 2020
+        </div>
+
+        <h1>Earn Real Money Sharing Your Opinion</h1>
+        <p class="content-text">Get paid instantly for market research surveys. Join 832,456+ members earning extra income.</p>
+        
+        <a href="#signup" class="cta-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+            Start Free Now
+        </a>
+
+        <div class="stat-grid">
+            <div class="stat-item">
+                <div class="stat-number">$1M+</div>
+                <div>Paid to Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8/5</div>
+                <div>User Rating</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15K+</div>
+                <div>Daily Surveys</div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <p>"I earned $245 last month just answering surveys during my commute. The payments arrive instantly - it's become my favorite side hustle!"</p>
+            <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/50" alt="User avatar">
+                <div>
+                    <div>Sarah J.</div>
+                    <div style="color: #64748b;">New York</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Google_Pay_Logo.svg" alt="Google Pay">
+        </div>
+
+        <footer>
+            <p>© 2023 SurveyEarn • <a href="#privacy" style="color: var(--primary-color);">Privacy Policy</a> • <a href="#terms" style="color: var(--primary-color);">Terms of Service</a></p>
+            <p style="margin-top: 1rem;">Member of Market Research Association • SSL Secured</p>
+        </footer>
+    </div>
+</body>
 </html>
+
+
